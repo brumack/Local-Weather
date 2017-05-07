@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+  <HEAD>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type = "text/css" href="local-weather.css">
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="local-weather.js"></script>
+  </HEAD>
+
+  <BODY>
+
+    <div class='container-fluid'>
+      <div id = "stripe" class='row'>
+        <div id = 'localCol' class='col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12'>
+          <div class="region"></div>
+          <div class = 'tempLine'><span class = "tempLocal"></span><button id = "fOrC"></button></div>
+          <div class = "condit"></div>
+        </div>
+
+        <div id='forecastCol' class='col-xl-9 col-lg-9 col-md-9 col-12-sm col-12-xs'>
+          <div id='plaque1' class='day'>
+            <div id='day1' class='dow'></div>
+            <div id='d1i' class='icon'></div>
+            <div class='tempFor'>H:<span id="d1h"></span><span class='tempLabel'></span></div>
+            <div class='tempFor'>L:<span id="d1l"></span><span class='tempLabel'></span></div>
+          </div>
+          <div id='plaque2' class='day'>
+            <div id='day2' class='dow'></div>
+            <div id='d2i' class='icon'></div>
+            <div class='tempFor'>H:<span id="d2h"></span><span class='tempLabel'></span></div>
+            <div class='tempFor'>L:<span id="d2l"></span><span class='tempLabel'></span></div>
+          </div>
+          <div id='plaque3' class='day'>
+            <div id='day3' class='dow'></div>
+            <div id='d3i' class='icon'></div>
+            <div class='tempFor'>H:<span id="d3h"></span><span class='tempLabel'></span></div>
+            <div class='tempFor'>L:<span id="d3l"></span><span class='tempLabel'></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </BODY>
+
+</HTML>

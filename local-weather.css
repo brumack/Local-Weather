@@ -1,0 +1,93 @@
+.container-fluid{
+  background-color:black;
+  text-align:center;
+  font-family:'Arvo';
+  height:100vh;
+  color:#ffffff;
+}
+
+#stripe {
+  background:rgb(153,3,33);
+  padding-top:5vw;
+  padding-bottom:5vw;
+  position:relative;
+    top:25vh;
+}
+
+#localCol {
+  font-weight:bold;
+  margin-top:3vw;
+  margin-bottom:2vw;
+}
+
+.condit {
+  font-size:2vw;
+}
+
+.region {
+  text-shadow: 3px 3px black;
+  font-size:3vw;
+}
+
+.tempLocal {
+  font-size:3vw;
+  font-weight:800;
+  text-shadow: 2px 2px black;
+}
+
+.tempFor {
+  font-size:2vw;
+  position:relative;
+    bottom:2vw;
+}
+
+#fOrC {
+  text-shadow:1px 1px black;
+  background:#ffffff;
+  color:#000000;
+  box-shadow:0;
+  border-width:.2vw;
+  border-radius:100%;
+  border-color:#000000;
+  font-size:.5vw;
+  width:1.5vw;
+  outline:none;
+  position:relative;
+    bottom:2vw;
+
+}
+
+#fOrC:hover {
+  border-color: #ffffff;
+  background:#000000;
+  color:#ffffff;
+}
+
+
+.day {
+  background-color:rgb(237,0,47);
+  display:inline-block;
+  width:20vw;
+  border-radius:100%;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.6);
+  text-shadow: 2px 2px black;
+  font-size:2.5vw;
+  border-style: solid;
+  border-width: .5vw;
+  border-color: #ffffff;
+  margin-left:1vw;
+
+}
+
+.dow {
+  position:relative;
+    top:1.5vw;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  width:auto;
+  height:10vw;
+  text-align:center;
+  margin: 0 auto;
+}
