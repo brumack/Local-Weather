@@ -15,9 +15,9 @@ $(document).ready(function() {
 var getWeather = function(tempType) {
   $.ajax({
     type: 'GET',
-    url: 'http://ip-api.com/json/',
+    url: 'https://api.ipify.org?format=json',
     success: function(data) {
-      var ip = data.query;
+      var ip = data.ip;
       $.ajax({
         type: 'GET',
         url: 'https://api.weatherbit.io/v1.0/current/ip?ip=' + ip + '&units=S&key=e14f101e3f74490e807874d3727dff1e',
@@ -49,9 +49,9 @@ var getWeather = function(tempType) {
 var getForecast = function(tempType) {
   $.ajax({
     type: 'GET',
-    url: 'http://ip-api.com/json/',
+    url: 'https://api.ipify.org?format=json',
     success: function(data) {
-      var ip = data.query;
+      var ip = data.ip;
       $.ajax({
         type: 'GET',
         url: 'https://api.weatherbit.io/v1.0/forecast/3hourly/ip?ip=' + ip + '&days=7&units=S&key=e14f101e3f74490e807874d3727dff1e',
@@ -61,8 +61,7 @@ var getForecast = function(tempType) {
           var timeSince = timeStamp % 86400;
           var timeTil = 86400 - timeSince;
           var nextDay = timeStamp + timeTil + 25200 - 3600;
-          console.log(nextDay);
-          console.log(data);
+
           var temps = [
             [],
             [],
@@ -82,8 +81,6 @@ var getForecast = function(tempType) {
             if (data.data[i].ts == nextDay)
               var begin = i;
 
-          console.log(begin);
-
           for (var j = 0; j < 3; j++)
             for (var k = begin; k < begin + 8; k++) {
               temps[j].push(data.data[k + (j*8)].temp);
@@ -91,7 +88,7 @@ var getForecast = function(tempType) {
                 icons.push(data.data[k*(j+1)].weather.icon);
             }
 
-          console.log(icons);
+          
           for (j = 0; j <= 2; j++) {
             temps[j].sort();
             date = new Date(nextDay * 1000 + 3600000 + (86400000 * j));
